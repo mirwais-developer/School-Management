@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>پوهنتون | د زده کړې ډیجیټل کتابتون</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         BACKGROUND EFFECTS
+    ================================= -->
+    <div class="bg-grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <!-- ================================
+         APP HEADER
+    ================================= -->
+    <header class="topbar">
+
+        <div class="brand" onclick="showHome()">
+
+            <div class="brand-logo">
+                <span>م</span>
+            </div>
+
+            <div class="brand-text">
+                <strong>دمکتب</strong>
+                <small>ډیجیټل کتابتون</small>
+            </div>
+
+        </div>
+
+
+        <nav class="desktop-nav">
+
+            <button onclick="showHome()" class="nav-btn active">
+                <span>⌂</span>
+                کور
+            </button>
+
+            <button onclick="openSection('school')" class="nav-btn">
+                <span>📚</span>
+                مکتب
+            </button>
+
+            <button onclick="openSection('prep')" class="nav-btn">
+                <span>🎓</span>
+                آمادګي
+            </button>
+
+            <button onclick="openSection('about')" class="nav-btn">
+                <span>👤</span>
+                زما په اړه
+            </button>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button class="icon-btn" onclick="toggleTheme()" title="Theme">
+                ◐
+            </button>
+
+            <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================================
+         MOBILE NAVIGATION
+    ================================= -->
+    <div id="mobileMenu" class="mobile-menu">
+
+        <button onclick="showHome(); toggleMobileMenu()">
+            🏠 کور
+        </button>
+
+        <button onclick="openSection('school'); toggleMobileMenu()">
+            📚 مکتب
+        </button>
+
+        <button onclick="openSection('prep'); toggleMobileMenu()">
+            🎓 آمادګي
+        </button>
+
+        <button onclick="openSection('about'); toggleMobileMenu()">
+            👤 زما په اړه
+        </button>
+
+    </div>
+
+
+    <!-- ================================
+         MAIN APPLICATION
+    ================================= -->
+    <main id="app">
+
+
+        <!-- ============================
+             HOME
+        ============================= -->
+        <section id="homePage" class="page active">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="pulse"></span>
+                        ۱۰۰٪ آفلاین تعلیمي سیستم
+                    </div>
+
+                    <h1>
+                        پوهه ستا په لاس کې،
+                        <span>هر وخت.</span>
+                    </h1>
+
+                    <p>
+                        د اووم څخه تر دولسم ټولګي پورې درسي کتابونه،
+                        د کانکور آمادګي مواد او یو منظم ډیجیټل کتابتون
+                        په یوه ښکلي او چټک اپلیکیشن کې.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button class="primary-btn" onclick="openSection('school')">
+                            📚 کتابونه وګوره
+                            <span>←</span>
+                        </button>
+
+                        <button class="secondary-btn" onclick="openSection('prep')">
+                            🎓 آمادګي
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="book-core">
+
+                        <div class="core-glow"></div>
+
+                        <div class="book-icon">
+                            📖
+                        </div>
+
+                        <strong>پوهه</strong>
+                        <small>Knowledge</small>
+
+                    </div>
+
+                    <div class="floating-card card-one">
+                        <span>📐</span>
+                        ریاضي
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <span>🧬</span>
+                        بیولوژي
+                    </div>
+
+                    <div class="floating-card card-three">
+                        <span>⚛️</span>
+                        فزیک
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACCESS -->
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="mini-label">QUICK ACCESS</span>
+                    <h2>ژر لاسرسی</h2>
+                </div>
+
+                <span class="line"></span>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <div class="quick-card school-card" onclick="openSection('school')">
+
+                    <div class="quick-icon">📚</div>
+
+                    <div>
+                        <h3>مکتب</h3>
+                        <p>۷م تر ۱۲م ټولګي</p>
+                    </div>
+
+                    <span class="arrow">←</span>
+
+                </div>
+
+
+                <div class="quick-card prep-card" onclick="openSection('prep')">
+
+                    <div class="quick-icon">🎓</div>
+
+                    <div>
+                        <h3>آمادګي</h3>
+                        <p>د کانکور آمادګي</p>
+                    </div>
+
+                    <span class="arrow">←</span>
+
+                </div>
+
+
+                <div class="quick-card about-card" onclick="openSection('about')">
+
+                    <div class="quick-icon">👤</div>
+
+                    <div>
+                        <h3>زما په اړه</h3>
+                        <p>زما پېژندنه</p>
+                    </div>
+
+                    <span class="arrow">←</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURES -->
+
+            <div class="features">
+
+                <div class="feature">
+                    <span>⚡</span>
+                    <div>
+                        <strong>چټک</strong>
+                        <small>پرته له انټرنېټ</small>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span>🔒</span>
+                    <div>
+                        <strong>خصوصي</strong>
+                        <small>ستاسې معلومات ستاسې دي</small>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span>📱</span>
+                    <div>
+                        <strong>Responsive</strong>
+                        <small>موبایل او کمپیوټر</small>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span>🌙</span>
+                    <div>
+                        <strong>Dark Mode</strong>
+                        <small>د سترګو لپاره مناسب</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================
+             SCHOOL
+        ============================= -->
+        <section id="schoolPage" class="page">
+
+            <div class="page-header">
+
+                <div>
+                    <span class="mini-label">SCHOOL LIBRARY</span>
+
+                    <h1>
+                        د مکتب کتابتون
+                    </h1>
+
+                    <p>
+                        خپل ټولګی انتخاب کړه او ټول درسي کتابونه وګوره.
+                    </p>
+                </div>
+
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        id="bookSearch"
+                        type="text"
+                        placeholder="کتاب ولټوئ..."
+                        oninput="searchBooks()"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div id="gradesGrid" class="grades-grid"></div>
+
+
+            <div id="booksArea" class="books-area hidden">
+
+                <div class="books-header">
+
+                    <button class="back-btn" onclick="backToGrades()">
+                        → بېرته ټولګیو ته
+                    </button>
+
+                    <div>
+                        <span class="mini-label">GRADE</span>
+                        <h2 id="selectedGradeTitle"></h2>
+                    </div>
+
+                </div>
+
+                <div id="booksGrid" class="books-grid"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================
+             PREPARATION
+        ============================= -->
+        <section id="prepPage" class="page">
+
+            <div class="page-header">
+
+                <div>
+                    <span class="mini-label">ENTRANCE EXAM PREPARATION</span>
+
+                    <h1>
+                        د کانکور آمادګي
+                    </h1>
+
+                    <p>
+                        د ساینسي علومو درې ښوونیز مرکزونه.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="prep-grid">
+
+
+                <div class="prep-card large">
+
+                    <div class="prep-number">
+                        01
+                    </div>
+
+                    <div class="prep-symbol">
+                        🧠
+                    </div>
+
+                    <div class="prep-content">
+
+                        <span>SCIENCE EDUCATION CENTER</span>
+
+                        <h2>
+                            د استاد عنایت الله وردګ
+                            د ساینسي علومو ښوونیز مرکز
+                        </h2>
+
+                        <p>
+                            د ساینسي مضامینو د زده کړې او کانکور
+                            آمادګۍ تعلیمي مواد.
+                        </p>
+
+                        <button onclick="openPreparation('inayatullah')">
+                            مواد وګوره ←
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="prep-card large">
+
+                    <div class="prep-number">
+                        02
+                    </div>
+
+                    <div class="prep-symbol">
+                        🔬
+                    </div>
+
+                    <div class="prep-content">
+
+                        <span>SCIENCE EDUCATION CENTER</span>
+
+                        <h2>
+                            د استاد قدرت الله نورزي
+                            د ساینسي علومو ښوونیز مرکز
+                        </h2>
+
+                        <p>
+                            د ساینسي علومو منظم تعلیمي مواد.
+                        </p>
+
+                        <button onclick="openPreparation('qudratullah')">
+                            مواد وګوره ←
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="prep-card large">
+
+                    <div class="prep-number">
+                        03
+                    </div>
+
+                    <div class="prep-symbol">
+                        🚀
+                    </div>
+
+                    <div class="prep-content">
+
+                        <span>SCIENCE EDUCATION CENTER</span>
+
+                        <h2>
+                            د محور کانکور
+                            د ساینسي علومو ښوونیز مرکز
+                        </h2>
+
+                        <p>
+                            د کانکور لپاره د ساینسي مضامینو
+                            آمادګي مواد.
+                        </p>
+
+                        <button onclick="openPreparation('mahwar')">
+                            مواد وګوره ←
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================
+             ABOUT
+        ============================= -->
+        <section id="aboutPage" class="page">
+
+            <div class="about-wrapper">
+
+                <div class="profile-card">
+
+                    <div class="profile-ring">
+
+                        <div class="profile-image">
+                            <img src="images/hom.JPG">
+                        </div>
+
+                    </div>
+
+                    <span class="online-dot"></span>
+
+                    <h1>
+                        Mirwais Danish 
+                    </h1>
+
+                    <p>
+                        دشیخ زاید پوهنتون ددریم صنف محصل
+                    </p>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span class="mini-label">
+                        ABOUT ME
+                    </span>
+
+                    <h1>
+                        زما په اړه
+                    </h1>
+
+                    <p> 
+                        زه میرویس دانش یم، د خوست شیخ زاید پوهنتون د کمپیوټر ساینس پوهنځي د درېیم ټولګي محصل.
+
+ما دا اپلیکیشن د دې لپاره جوړ کړی، چې زموږ ګران زده کوونکي وکولای شي درسي کتابونو او تعلیمي موادو ته په اسانه او منظم ډول لاسرسی ولري.
+
+زما موخه: د ټکنالوژۍ له لارې د زده کړې اسانتیا او د زده کوونکو لپاره د مطالعې غوره چاپېریال رامنځته کول.
+                    </p>
+
+
+                    <div class="about-stats">
+
+                        <div>
+                            <strong>۶</strong>
+                            <span>ټولګي</span>
+                        </div>
+
+                        <div>
+                            <strong>۳</strong>
+                            <span>آمادګي مرکزونه</span>
+                        </div>
+
+                        <div>
+                            <strong>∞</strong>
+                            <span>پوهه</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quote">
+
+                        <span>“</span>
+
+                        پوهه هغه سرمایه ده چې
+                        هر څومره یې ووېشې، هماغومره ډېریږي.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================================
+         BOOK VIEWER MODAL
+    ================================= -->
+    <div id="bookModal" class="modal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" onclick="closeModal()">
+                ×
+            </button>
+
+            <div class="modal-icon">
+                📖
+            </div>
+
+            <span class="mini-label">
+                OFFLINE BOOK
+            </span>
+
+            <h2 id="modalBookTitle">
+                کتاب
+            </h2>
+
+            <p id="modalBookDescription">
+                د کتاب معلومات
+            </p>
+
+            <button id="openPdfButton" class="primary-btn">
+                📖 کتاب پرانیزئ
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         TOAST
+    ================================= -->
+    <div id="toast" class="toast">
+        <span>✓</span>
+        <p></p>
+    </div>
+
+
+    <footer>
+
+        <div>
+            © 2026 — دمکتب ډیجیټل کتابتون
+        </div>
+
+        <div>
+            جوړ شوی د زده کړې لپاره • Offline First
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
